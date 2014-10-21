@@ -7,13 +7,45 @@
 //
 
 import UIKit
+import WebKit
 
 class FirstViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var containerView: UIWebView!
+    var webView: WKWebView?
+    
+    override func loadView() {
+        super.loadView()
+        self.webView = WKWebView(frame: self.containerView!.frame)
+        self.view.addSubview(webView!)
+        self.webView?.reload()
+        containerView.backgroundColor = UIColor.blueColor()
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var url = NSURL(string: "http://google.com")
+        var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
+        var request = NSURLRequest(URL: url!)
+        self.webView?.loadRequest(request)
+        
+        self.webView?.scrollView.scrollEnabled = false
+        self.webView?.scrollView.bounces = false
+        self.webView?.scrollView.multipleTouchEnabled = false
+    
+        self.webView?.scrollView.clipsToBounds = false // IMPORTANT!!!
+        
+        
+
+      
     }
+    
+    
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
