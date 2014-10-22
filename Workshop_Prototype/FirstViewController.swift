@@ -29,7 +29,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         var url = NSURL(string: "http://google.com")
         var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
-        var request = NSURLRequest(URL: url!)
+        var request = NSURLRequest(URL: NSURL(fileURLWithPath: path!)!)
         self.webView?.loadRequest(request)
         
         self.webView?.scrollView.scrollEnabled = false
