@@ -22,9 +22,12 @@ class SecondViewController: UIViewController {
         self.webView = WKWebView(frame: self.containerView.frame)
         self.view.addSubview(webView!)
         
-        var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
-        var request = NSURLRequest(URL: NSURL(fileURLWithPath: path!)!)
+        var url = NSURL(string: "http://kursdaten.teleboerse.de/teleboerse/3077/chartNG.gfn?overTime=2&amp;subProperty=0&amp;instrumentId=1618673&amp;chartType=8&amp;newsType=1&amp;highLow=1&amp;height=244&amp;width=450&amp;time=10000")
+        var request = NSURLRequest(URL: url!)
         self.webView?.loadRequest(request)
+        
+        self.webView?.scrollView.bounces = false
+        self.webView?.scrollView.clipsToBounds = false
 
         
     }

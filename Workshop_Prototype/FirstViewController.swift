@@ -29,9 +29,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //var url = NSURL(string: "http://www.google.com")
-        var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
-        var request = NSURLRequest(URL: NSURL(fileURLWithPath: path!)!)
+        var url = NSURL(string: "https://chart.finance.yahoo.com/z?s=YHOO&amp;t=1y&amp;q=&amp;l=&amp;z=l&amp;a=v&amp;p=s&amp;lang=de-DE&amp;region=DE")
+        var request = NSURLRequest(URL: url!)
         self.webView?.loadRequest(request)
         
         self.webView?.scrollView.scrollEnabled = true
