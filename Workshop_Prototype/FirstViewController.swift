@@ -20,16 +20,18 @@ class FirstViewController: UIViewController {
         self.webView = WKWebView(frame: self.containerView!.frame)
         self.view.addSubview(webView!)
         self.webView?.reload()
-        containerView.backgroundColor = UIColor.blueColor()
         
+        containerView.backgroundColor = UIColor.blueColor()
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var url = NSURL(string: "http://google.com")
-        var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
-        var request = NSURLRequest(URL: NSURL(fileURLWithPath: path!)!)
+        
+        var url = NSURL(string: "http://www.google.com")
+            //var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
+        var request = NSURLRequest(URL: url!)
         self.webView?.loadRequest(request)
         
         self.webView?.scrollView.scrollEnabled = false
@@ -39,8 +41,6 @@ class FirstViewController: UIViewController {
         self.webView?.scrollView.clipsToBounds = false // IMPORTANT!!!
         
         
-
-      
     }
     
     

@@ -17,6 +17,18 @@
 		D6A4F87D19F54C25008AB035 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F87C19F54C25008AB035 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		D64193E319F7E42F0004801E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.xcode.tools.swift.compiler;
+			filePatterns = index.htm;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		D6297E6819F507E200126FE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -130,6 +142,7 @@
 				D6297E4E19F507E200126FE1 /* Resources */,
 			);
 			buildRules = (
+				D64193E319F7E42F0004801E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
