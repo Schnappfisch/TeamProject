@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
         self.view.addSubview(webView!)
         self.webView?.reload()
         
-        containerView.backgroundColor = UIColor.blueColor()
+       containerView.backgroundColor = UIColor.blueColor()
         
     }
     
@@ -29,12 +29,12 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var url = NSURL(string: "http://www.google.com")
-            //var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
-        var request = NSURLRequest(URL: url!)
+        //var url = NSURL(string: "http://www.google.com")
+        var path = NSBundle.mainBundle().pathForResource("index", ofType: "htm")
+        var request = NSURLRequest(URL: NSURL(fileURLWithPath: path!)!)
         self.webView?.loadRequest(request)
         
-        self.webView?.scrollView.scrollEnabled = false
+        self.webView?.scrollView.scrollEnabled = true
         self.webView?.scrollView.bounces = false
         self.webView?.scrollView.multipleTouchEnabled = false
     

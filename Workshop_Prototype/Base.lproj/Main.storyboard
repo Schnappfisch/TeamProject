@@ -31,22 +31,27 @@
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
-                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-tk-KpD">
+                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-tk-KpD">
                                 <rect key="frame" x="0.0" y="62" width="320" height="457"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qov-Fw-RG8" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="EYA-3E-bC8"/>
-                            <constraint firstItem="dGE-C8-IT1" firstAttribute="top" secondItem="qov-Fw-RG8" secondAttribute="bottom" id="FVh-OC-U0C"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="top" secondItem="bjl-2a-87W" secondAttribute="bottom" id="69s-Y3-ssi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dzo-tk-KpD" secondAttribute="trailing" constant="-16" id="7Em-Tu-fPu"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="leading" secondItem="qov-Fw-RG8" secondAttribute="leading" id="C2R-HM-ZT5"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="E78-Pz-dPv"/>
                             <constraint firstItem="bjl-2a-87W" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="FqE-CR-qK7"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="bottom" secondItem="qov-Fw-RG8" secondAttribute="bottom" id="LrZ-Ji-3fu"/>
                             <constraint firstItem="l2e-Yy-Hw8" firstAttribute="centerX" secondItem="bjl-2a-87W" secondAttribute="centerX" constant="0.5" id="ONv-Gu-8pQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bjl-2a-87W" secondAttribute="trailing" constant="-16" id="SUo-gM-BlK"/>
                             <constraint firstItem="l2e-Yy-Hw8" firstAttribute="centerY" secondItem="bjl-2a-87W" secondAttribute="centerY" constant="2" id="ZAB-J5-rc8"/>
-                            <constraint firstItem="qov-Fw-RG8" firstAttribute="top" secondItem="bjl-2a-87W" secondAttribute="bottom" id="dUq-Og-ybs"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="top" secondItem="qov-Fw-RG8" secondAttribute="top" id="ZiI-an-puu"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="trailing" secondItem="qov-Fw-RG8" secondAttribute="trailing" id="g0b-Ac-3oS"/>
                             <constraint firstItem="bjl-2a-87W" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="18" id="pd1-GC-zUD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qov-Fw-RG8" secondAttribute="trailing" constant="-16" id="u8I-fz-8Pj"/>
+                            <constraint firstItem="dGE-C8-IT1" firstAttribute="top" secondItem="Dzo-tk-KpD" secondAttribute="bottom" id="uW8-g3-L98"/>
+                            <constraint firstItem="Dzo-tk-KpD" firstAttribute="top" secondItem="bjl-2a-87W" secondAttribute="bottom" id="w0e-qF-4XS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="first" id="acW-dT-cKf"/>
@@ -73,18 +78,38 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZK-qE-hy9">
                                 <rect key="frame" x="0.0" y="28" width="320" height="491"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCV-9z-car">
+                                        <rect key="frame" x="0.0" y="18" width="320" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </webView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-lW-WAV">
+                                        <rect key="frame" x="113" y="276" width="94" height="29"/>
+                                    </stepper>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fCV-9z-car" firstAttribute="leading" secondItem="HZK-qE-hy9" secondAttribute="leading" id="1O5-W9-afP"/>
+                                    <constraint firstItem="fCV-9z-car" firstAttribute="top" secondItem="HZK-qE-hy9" secondAttribute="top" constant="18" id="BOu-by-lid"/>
+                                    <constraint firstAttribute="trailing" secondItem="fCV-9z-car" secondAttribute="trailing" id="FMo-KS-Yet"/>
+                                    <constraint firstAttribute="centerY" secondItem="R3q-lW-WAV" secondAttribute="centerY" constant="-45" id="Gjb-vE-HjU"/>
+                                    <constraint firstItem="R3q-lW-WAV" firstAttribute="top" secondItem="fCV-9z-car" secondAttribute="bottom" constant="8" symbolic="YES" id="JDE-JL-p3n"/>
+                                    <constraint firstItem="fCV-9z-car" firstAttribute="centerX" secondItem="R3q-lW-WAV" secondAttribute="centerX" id="bqs-Pa-gQ0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HZK-qE-hy9" firstAttribute="top" secondItem="pSN-oq-W1i" secondAttribute="bottom" constant="8" symbolic="YES" id="4K1-Yd-Jpt"/>
-                            <constraint firstItem="HZK-qE-hy9" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="52w-nh-03H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HZK-qE-hy9" secondAttribute="trailing" constant="-16" id="7Ha-c9-tqq"/>
-                            <constraint firstItem="HZK-qE-hy9" firstAttribute="bottom" secondItem="d6G-d7-n4e" secondAttribute="top" id="eH3-EW-L2K"/>
+                            <constraint firstAttribute="trailing" secondItem="HZK-qE-hy9" secondAttribute="trailing" id="6lR-EO-Cmr"/>
+                            <constraint firstItem="HZK-qE-hy9" firstAttribute="bottom" secondItem="d6G-d7-n4e" secondAttribute="top" id="BCi-AP-pnf"/>
+                            <constraint firstItem="HZK-qE-hy9" firstAttribute="top" secondItem="pSN-oq-W1i" secondAttribute="bottom" constant="8" symbolic="YES" id="jkA-BP-jvj"/>
+                            <constraint firstItem="HZK-qE-hy9" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="xlJ-sV-AsA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="containerView" destination="fCV-9z-car" id="TG2-E0-MpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
